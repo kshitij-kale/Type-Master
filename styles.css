@@ -1,0 +1,71 @@
+#main-title {
+  margin: 0;
+  text-align: center;
+  padding: 30px 0;
+  background-color: violet;
+  color: white;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+div {
+  margin: 10px;
+  padding: 0 10px;
+}
+
+textarea {
+  margin: 10px;
+  padding: 0 10px;
+  background-color: rgba(256,256,256,0.0);
+  color: rgba(256,256,256,0.0);
+  border: none;
+}
+
+button {
+  margin: 10px;
+  padding: 0 10px;
+}
+
+span {
+  font-size: 22;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: repeat(8, 50px);
+}
+
+.grid-item-1 {
+  grid-column: 1/6; 
+  font-size: 22;
+} 
+
+.grid-item-2 {
+  grid-column: 1/-1;
+  grid-row: 2/5;
+  overflow: hidden;
+}
+
+.grid-item-3 {
+  grid-column: 1/-1;
+  grid-row: 2/5;
+  outline: none;
+}
+
+.grid-item-4 {
+  grid-column: 5/7;
+  font-size: 30;
+  grid-row: 6/8;
+}
+
+.grid-item-5 {
+  grid-column: 1/-1;
+  text-align: center;
+  font-size: 22;
+}
+
+.grid-item-6 {
+  grid-column: 6/-1;
+  font-size: 22;
+  text-align: right;
+}

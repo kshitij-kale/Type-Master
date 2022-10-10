@@ -10009,7 +10009,12 @@ const wordArray = words.split("\n");
 let counter = 0;
 let numCompletedWords = 0;
 let button = document.querySelector('button');
-scoreBoard.textContent = `High Score: ${localStorage.getItem("hs")} Words Per Minute`;
+if(localStorage.getItem('hs') == null) {
+  scoreBoard.textContent = `High Score: 0 Words Per Minute`;
+} 
+else {
+  scoreBoard.textContent = `High Score: ${localStorage.getItem('hs')} Words Per Minute`;
+}
 button.addEventListener('click', refresh);
 
 function refresh(e) {

@@ -9999,7 +9999,7 @@ zshops
 zu
 zum
 zus`;
-let time = 3;
+let time = 30;
 let timerBox = document.querySelector('.grid-item-1');
 let wordBox = document.querySelector('.grid-item-2');
 let typingBox = document.querySelector('.grid-item-3');

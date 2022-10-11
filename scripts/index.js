@@ -1,3 +1,4 @@
+
 let words = `a
 aa
 aaa
@@ -9998,7 +9999,7 @@ zshops
 zu
 zum
 zus`;
-let time = 30;
+let time = 3;
 let timerBox = document.querySelector('.grid-item-1');
 let wordBox = document.querySelector('.grid-item-2');
 let typingBox = document.querySelector('.grid-item-3');
@@ -10009,6 +10010,9 @@ const wordArray = words.split("\n");
 let counter = 0;
 let numCompletedWords = 0;
 let button = document.querySelector('button');
+let focusBox = document.querySelector('.grid-item-7');
+
+
 if(localStorage.getItem('hs') == null) {
   scoreBoard.textContent = `High Score: 0 Words Per Minute`;
 } 
@@ -10032,6 +10036,7 @@ for(let i = 0; i < 500; i++) {
   wordBox.innerHTML += `<span> </span>`;
 }
 typingBox.addEventListener('input', match);
+wordBox.addEventListener('click', inFocus);
 
 
 function match(e) {
@@ -10065,5 +10070,19 @@ if(time != 0) {
       scoreBoard.textContent = `High Score: ${localStorage.getItem("hs")} Words Per Minute`;
     }
     typingBox.remove();
+    wordBox.classList.remove("blur");
+    focusBox.remove();
   }
+}
+
+function outOfFocus() {
+  wordBox.style.zIndex = '0';
+  wordBox.classList.add("blur");
+  focusBox.style.display = 'block';
+}
+
+function inFocus() {
+  wordBox.classList.remove("blur");
+  focusBox.style.display = "none";
+  typingBox.focus();
 }

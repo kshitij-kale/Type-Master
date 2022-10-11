@@ -10031,8 +10031,8 @@ for(let i = 0; i < 500; i++) {
   });
   wordBox.innerHTML += `<span> </span>`;
 }
-typingBox.addEventListener('keyup', match);
-typingBox.addEventListener('keydown', match);
+typingBox.addEventListener('input', match);
+
 
 function match(e) {
   if(started) {

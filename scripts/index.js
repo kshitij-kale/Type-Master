@@ -10041,6 +10041,7 @@ wordBox.addEventListener('click', inFocus);
 
 function match(e) {
   if(started) {
+    countdown();
     setInterval(countdown, 1000);
     started = false;
   }
